@@ -2,7 +2,7 @@
 
 ARG VARIANT=scratch
 
-FROM --platform=$BUILDPLATFORM alpine:3.22.1 AS kubectl
+FROM --platform=$BUILDPLATFORM alpine:3.23.2 AS kubectl
 
 ARG KUBECTL_VERSION
 
@@ -18,7 +18,7 @@ RUN <<EOT
   chmod +x kubectl
 EOT
 
-FROM alpine:3.22.1 AS kubectl-alpine
+FROM alpine:3.23.2 AS kubectl-alpine
 COPY --from=kubectl /kubectl /usr/local/bin
 ENTRYPOINT ["kubectl"]
 
