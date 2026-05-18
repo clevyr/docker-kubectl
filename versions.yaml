@@ -1,7 +1,8 @@
 kubectl_version:
-  - v1.35.4
-  - v1.34.7
-  - v1.33.11
+  - v1.36.1
+  - v1.35.5
+  - v1.34.8
+  - v1.33.12
 include:
-  - kubectl_version: v1.35.4
+  - kubectl_version: v1.36.1
     is_latest: true
